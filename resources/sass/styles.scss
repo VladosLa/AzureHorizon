@@ -1,0 +1,705 @@
+.button {
+  background: #05B3F0;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: "Sakkal Majalla";
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 67px;
+  min-width: 300px;
+  min-height: 100px;
+}
+
+.button-submit {
+  background: #05B3F0;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: "Sakkal Majalla";
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 67px;
+  min-width: 200px;
+  min-height: 50px;
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 30%;
+  left: 39%;
+  z-index: 101;
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 50px;
+}
+.modal__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #05B3F0;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.modal__title-span {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 245px;
+  margin: 0 auto;
+  gap: 10px;
+}
+.modal__label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #1E1E1E;
+}
+.modal__input {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 40px;
+  min-height: 43px;
+}
+.modal__hide-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  max-width: 20px;
+}
+.modal__login-btn {
+  background: #05B3F0;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  min-width: 200px;
+  min-height: 50px;
+}
+.modal__reg-btn-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+.modal__reg-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+}
+.modal__reg-span {
+  color: #05B3F0;
+}
+
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("/public/fonts/Roboto-Medium.ttf") format("truetype"), url("/public/fonts/Roboto-Regular.ttf") format("truetype"), url("/public/fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sakkal Majalla";
+  src: url("/public/fonts/majalla.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #003C92;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+  pointer-events: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 60px;
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 45px;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  width: 710px;
+  list-style: none;
+}
+.nav__list-item:hover {
+  border: none;
+  background: #05B3F0;
+  border-radius: 50px;
+  transition: all ease-in-out 0.5s;
+}
+.nav__list-link {
+  color: #fff;
+  padding: 15px;
+}
+
+.hero {
+  padding-top: 90px;
+  color: #fff;
+}
+.hero__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__title {
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 85px;
+  margin-bottom: 20px;
+  max-width: 830px;
+}
+.hero__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  max-width: 537px;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 90px;
+}
+.slider__wrapper {
+  display: flex;
+  transition: transform 500ms ease-out;
+}
+
+.slide {
+  flex: 1 0 100%;
+}
+
+.facilities {
+  padding-top: 90px;
+  color: #fff;
+}
+.facilities__title {
+  text-align: center;
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 85px;
+}
+.facilities__text {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.facilities__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+.facilities__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  min-width: 210px;
+}
+.facilities__pic {
+  width: 170px;
+  height: 125px;
+  display: block;
+  margin-bottom: 24px;
+}
+.facilities__name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.apartments {
+  padding-top: 90px;
+  color: #fff;
+}
+.apartments__title {
+  text-align: center;
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 85px;
+}
+.apartments__text {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.apartments__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 130px 0 130px;
+}
+.apartments__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.apartments__pic {
+  margin-bottom: 15px;
+}
+.apartments__atribute {
+  display: block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 5px;
+}
+.apartments__card-subtitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.review {
+  padding-top: 90px;
+  color: #fff;
+}
+.review__title {
+  text-align: center;
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 85px;
+}
+.review__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.review__form {
+  text-align: center;
+}
+.review__label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.review__input {
+  max-width: 500px;
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 30px;
+  margin: 20px 0;
+  resize: none;
+  padding: 15px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.map {
+  padding-top: 90px;
+}
+
+footer {
+  padding-top: 90px;
+  color: #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__title {
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.footer__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  opacity: 0.3;
+  margin-bottom: 40px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.footer__form {
+  min-width: 477px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.footer__input {
+  width: 100%;
+  max-width: 300px;
+  height: 55px;
+  background-color: #003C92;
+  border: 1.5px solid #FFFFFF;
+  border-radius: 6px;
+  padding-left: 15px;
+}
+.footer__input::-moz-placeholder {
+  color: #fff;
+  opacity: 0.3;
+}
+.footer__input::placeholder {
+  color: #fff;
+  opacity: 0.3;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer__list-item {
+  list-style: none;
+}
+.footer__list-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.footer__list-link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+
+.gallery {
+  padding-top: 90px;
+  color: #fff;
+}
+.gallery__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 90px;
+}
+.gallery__title {
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 85px;
+  margin-bottom: 20px;
+  max-width: 427px;
+}
+.gallery__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  max-width: 638px;
+}
+
+.room {
+  padding-top: 90px;
+  color: #fff;
+}
+.room__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 90px;
+}
+.room__title {
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 85px;
+  margin-bottom: 20px;
+}
+.room__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  max-width: 800px;
+}
+.room__card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.room__card {
+  min-width: 402px;
+}
+.room__card-pic {
+  min-width: 402px;
+}
+.room__name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.room__card-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+}
+.room__occupation {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+.room__price {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+.room__icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addservice {
+  padding-top: 90px;
+  color: #fff;
+}
+.addservice__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 90px;
+}
+.addservice__title {
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 85px;
+  margin-bottom: 20px;
+}
+.addservice__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  max-width: 638px;
+}
+.addservice__card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.addservice__card {
+  min-width: 402px;
+}
+.addservice__card-pic {
+  min-width: 402px;
+}
+.addservice__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.addservice__card-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+}
+.addservice__price {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.aboutus {
+  padding-top: 90px;
+  color: #fff;
+}
+.aboutus__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 90px;
+}
+.aboutus__title {
+  font-family: "Sakkal Majalla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 85px;
+  margin-bottom: 20px;
+}
+.aboutus__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  max-width: 638px;
+}
+.aboutus__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: "Roboto";
+}
+.aboutus__info {
+  max-width: 516px;
+}
+.aboutus__pic {
+  margin-bottom: 35px;
+}
+.aboutus__name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+.aboutus__info-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33px;
+  max-width: 750px;
+}
+
+.user {
+  padding-top: 90px;
+  color: #fff;
+}
+.user__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 90px;
+}
+.user__change-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+}
+.user__info {
+  display: flex;
+}
+.user__name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+}
+.user__dropdown-toggle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #FFFFFF;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.modal__labell {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
